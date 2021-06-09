@@ -52,11 +52,6 @@
     "postinstall": "yarn build",
     "prepublishOnly": "yarn clean && yarn build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "linters": {
       "packages/**/*.{ts,tsx}": [

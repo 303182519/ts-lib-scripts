@@ -33,9 +33,7 @@ export function getAppPackageInfo() {
 /**
  * 项目版本号
  */
-export const getAppVersion = () => {
-  return getAppPackageInfo().version;
-};
+export const getAppVersion = () => getAppPackageInfo().version;
 
 /**
  * 解析模块的真实文件路径
@@ -109,13 +107,11 @@ export const getJestDOMModulePath = () => {
 /**
  * 库对应的全局名称
  */
-export const globals = () => {
-  return {
-    react: 'React',
-    'react-native': 'ReactNative',
-    ...getAppPackageInfo().globals,
-  };
-};
+export const globals = () => ({
+  react: 'React',
+  'react-native': 'ReactNative',
+  ...getAppPackageInfo().globals,
+});
 
 /**
  * 获取 mono 项目的根目录

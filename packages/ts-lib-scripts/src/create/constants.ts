@@ -2,7 +2,7 @@
  * 开发依赖
  */
 export const devDependencies = [
-  'husky',
+  'husky@3',
   'prettier',
   'ts-lib-tools',
   'lint-staged',

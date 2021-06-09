@@ -27,6 +27,7 @@ module.exports = function create(_api, _opts, env) {
           corejs: 3,
           // Do not transform modules to CJS
           modules: false,
+          loose: true,
           // Exclude transforms that make all code slower
           exclude: ['transform-typeof-symbol'],
           targets: '> 0.25%, not dead, not op_mini all',
@@ -43,6 +44,7 @@ module.exports = function create(_api, _opts, env) {
           corejs: 3,
           // Do not transform modules to CJS
           modules: false,
+          loose: true,
           // Exclude transforms that make all code slower
           exclude: ['transform-typeof-symbol'],
         },

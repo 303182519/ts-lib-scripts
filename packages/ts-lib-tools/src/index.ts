@@ -44,7 +44,10 @@ program
     '指定目标环境，可选项为web、node，默认为web',
     'web',
   )
-  .option('--name <name>', '指定在UMD中的名称，默认会取package.json中的name')
+  .option(
+    '--umdname <umdname>',
+    '指定在UMD中的名称，默认会取package.json中的name',
+  )
   .option(
     '--outDir <outDir>',
     `指定输出目录，默认为${DIST_PATH_NAME}`,

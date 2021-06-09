@@ -26,7 +26,7 @@ interface BuildOptions {
   /**
    * UMD中使用的模块名称
    */
-  name: string;
+  umdname: string;
 
   /**
    * 输出目录

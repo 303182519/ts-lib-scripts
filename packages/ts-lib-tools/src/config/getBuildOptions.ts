@@ -9,11 +9,11 @@ import * as paths from './paths';
  */
 export function getBuildOptions(buildOptions: BuildOptions) {
   const entry = buildOptions.entry || paths.entry;
-  const name = buildOptions.name || getLibraryName();
+  const umdname = buildOptions.umdname || getLibraryName();
 
   return {
     entry,
-    name,
+    umdname,
     target: buildOptions.target,
     format: buildOptions.format,
     outDir: paths.resolveRoot(buildOptions.outDir),

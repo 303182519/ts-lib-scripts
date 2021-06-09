@@ -3,10 +3,10 @@ import { pathExists, readJSON, copy, outputJSON, move } from 'fs-extra';
 import { resolve } from 'path';
 import { safePackageName } from 'ts-lib-scripts-utils';
 import chalk from 'chalk';
-import { resolveRoot, MODULE_TEMPLATE_PATH } from './config/paths';
 
 import execa = require('execa');
 import ora = require('ora');
+import { resolveRoot, MODULE_TEMPLATE_PATH } from './config/paths';
 
 /**
  * 生成许可证文件
@@ -77,12 +77,12 @@ async function genModule(moduleName: string) {
 
   spinner.succeed(`已生成模块 ${chalk.green(moduleName)}`);
 
-  spinner.start('执行yarn');
-  // 执行yarn
-  await execa('yarn', undefined, {
-    cwd: modulePath,
-  });
-  spinner.succeed('执行yarn');
+  // spinner.start('执行yarn');
+  // // 执行yarn
+  // await execa('yarn', undefined, {
+  //   cwd: modulePath,
+  // });
+  // spinner.succeed('执行yarn');
 
   console.log(chalk.green(`模块${moduleName}已生成。`));
 }

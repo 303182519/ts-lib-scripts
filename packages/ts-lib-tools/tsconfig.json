@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["src", "../ts-lib-scripts-utils/src/utils.spec.ts"],
+  "include": ["src"],
   "exclude": ["**/*.spec.ts", "**/*.test/ts"],
   "compilerOptions": {
     "composite": true,

@@ -122,9 +122,9 @@ export function createRollupOutputOptions(
 ) {
   const outputOptions: OutputOptions = {
     file: getOutputFilePath(input.outDir, format, env),
-    name: input.name,
+    name: input.umdname,
     sourcemap: true,
-    globals,
+    globals: globals(),
     format,
     freeze: false,
     esModule: format === 'cjs',
